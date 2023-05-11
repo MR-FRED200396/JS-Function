@@ -119,9 +119,9 @@ const out7 = document.querySelector(".out-7");
 let z7 = 91;
 
 function t7() {
-  z7++;
   out7.innerHTML = z7;
   z7 >= 100 ? (z7 = 99) : false;
+  z7++;
 }
 
 document.querySelector(".b-7").addEventListener("click", t7);
@@ -150,8 +150,8 @@ function showNumber() {
 
 function t8() {
   showNumber();
+  z8 >= 9 ? (z8 = -1) : false;
   z8++;
-  z8 >= 10 ? (z8 = 0) : false;
 }
 
 document.querySelector(".b-8").addEventListener("click", t8);
@@ -159,11 +159,11 @@ document.querySelector(".b-8").addEventListener("click", t8);
 // Task 9
 // Напишите функцию t9, которая в зависимости от значения переменной z9, делает активным option s.9 в таким же value. Внимание, z9 может иметь значения 1, 2, 3, 4, 5. Действия запускаются по кнопке .b-9.
 
-let z9 = 3;
+let z9 = 5;
 const s9 = document.querySelector(".s-9");
 
 function t9() {
-  z9 == s9.value ? s9.setAttribute("data-active", "active") : false;
+  s9.value = z9;
 }
 
 document.querySelector(".b-9").addEventListener("click", t9);
@@ -180,11 +180,12 @@ function showArr() {
 }
 
 function t10() {
+  ar10_res = [];
   ar10.map((item) => {
     typeof item === "number" ? ar10_res.push(item) : false;
   });
   showArr();
-  ar10_res = []; // очищаем
+  // очищаем
 }
 
 document.querySelector(".b-10").addEventListener("click", t10);

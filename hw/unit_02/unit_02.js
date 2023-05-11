@@ -40,11 +40,15 @@ document.querySelector(".b-3").addEventListener("click", function () {
 
 function t4(a, b, c) {
   const out4 = document.querySelector(".out-4");
-  out4.innerHTML = a / b === 0 ? a / b : c;
+  if (b === 0) {
+    return (out4.innerHTML = c);
+  } else {
+    return (out4.innerHTML = a / b);
+  }
 }
 
 document.querySelector(".b-4").addEventListener("click", function () {
-  t4(7, 12, false);
+  t4(7, 0, false);
 });
 
 // Task 5
@@ -116,8 +120,7 @@ document.querySelector(".b-8").addEventListener("click", function () {
 const out9 = document.querySelector(".out-9");
 
 function t9(text = "", block) {
-  if (block === undefined) {
-    false;
+  if (!block) {
   } else {
     block.innerText = text.trim().toLowerCase();
   }

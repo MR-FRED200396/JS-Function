@@ -223,7 +223,7 @@ document.querySelector(".b-14").addEventListener("click", function () {
 // Напишите функцию, которая получает строку как аргумент и возвращает строку очищенную от пробелов ( с начала и конца) или false если строка содержит только пробелы.
 
 function t15(str) {
-  return str === "" ? false : str.trim();
+  return str.trim() === "" ? false : str.trim();
 }
 
 document.querySelector(".b-15").addEventListener("click", function () {
@@ -278,7 +278,7 @@ document.querySelector(".i-19").addEventListener("input", function () {
 // Напишите функцию, которая получает строку и возвращает "развернутую" строку.
 
 function t20(s) {
-  return s.split(" ").map((e) => e.split("").reverse().join(""));
+  return s.split("").reverse().join("");
 }
 
 document.querySelector(".b-20").addEventListener("click", function () {
@@ -448,7 +448,7 @@ function t31() {
 }
 
 function t30() {
-  return t31();
+  return t31;
 }
 
 document.querySelector(".b-30").addEventListener("click", function () {
