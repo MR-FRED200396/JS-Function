@@ -42,7 +42,7 @@ console.log(count3());
 function createCount(countArg = 0) {
   let count = countArg;
   return function () {
-    return count++;
+    return ++count;
   };
 }
 

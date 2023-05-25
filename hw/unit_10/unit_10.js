@@ -8,14 +8,14 @@ function t1(n) {
     out += z + " ";
     document.querySelector(".out-1").innerHTML = out;
     z--;
-    if (z === 0) return;
+    if (z === -1) return;
     r1(z);
   }
   r1(n);
 }
 
 document.querySelector(".b-1").addEventListener("click", () => {
-  t1(5);
+  t1(10);
 });
 
 // Task 2
@@ -29,7 +29,7 @@ function t2(n) {
     out += count + " ";
     document.querySelector(".out-2").innerHTML = out;
     count++;
-    if (count === z) return;
+    if (count === z + 1) return;
     r2(z);
   }
   r2(n);
@@ -68,7 +68,7 @@ let ar4 = [3, 4, 6, 7, 8];
 function t4() {
   let count = randomInteger(0, 10);
   if (ar4.includes(count)) {
-    t4();
+    return t4();
   } else {
     return count;
   }

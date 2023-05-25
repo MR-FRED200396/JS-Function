@@ -94,7 +94,7 @@ function t5(elem) {
     }
 
     Array.from(element.children).forEach((item) => {
-      r5(item);
+      return r5(item);
     });
   }
 }
